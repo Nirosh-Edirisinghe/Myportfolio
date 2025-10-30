@@ -13,9 +13,9 @@ const Header = () => {
       <p className='max-w-2xl mx-auto font-ovo'>I am a web developer from Sri Lanka, with 1 year of experience in muliple comapnies.</p>
 
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-        <a className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2' href="#conatct">Conatct me <Image src={assets.right_arrow_white} alt='' className='w-4'/></a>
+        <a className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent' href="#conatct">Conatct me <Image src={assets.right_arrow_white} alt='' className='w-4'/></a>
 
-        <a href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>my resume <Image src={assets.download_icon} alt='' className='w-4'/></a>
+        <a href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <Image src={assets.download_icon} alt='' className='w-4'/></a>
       </div>
     </div>
   )
