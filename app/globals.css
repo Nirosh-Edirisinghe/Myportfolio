@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 @theme {
@@ -17,3 +18,5 @@
 .font-ovo {
   font-family: var(--font-ovo);
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
