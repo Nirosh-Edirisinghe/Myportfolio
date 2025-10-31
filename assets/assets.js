@@ -36,6 +36,19 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import myprofile from './myprofile.jpg'
+import news from './news.png'
+import parmacy1 from './parmacy1.png'
+import ecommercec from './ecommercec.png'
+import pos from './pos.png'
+import cofeeshop from './cofeeshop.png'
+import resturant from './resturant.png'
+import imagesearch from './imagesearch.png'
+import weather from './weather.png'
+import todo from './todo.png'
+import movie from './movie.png'
+import tourism from './tourism.png'
+
+
 
 export const assets = {
     user_image,
@@ -117,3 +130,161 @@ export const infoList = [
 export const toolsData = [
     assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
 ];
+
+export const projects = [
+   {
+     id: 9,
+     title: "AI News Voice Assistant",
+     date: "Jun 2024 - Nov 2024",
+     description:
+       "AI News Voice Assistant is a voice-controlled news platform that provides real-time, personalized news updates. Built with React.js.",
+     image:
+       news,
+     tags: [
+       "React Js",
+       "Alan AI",
+       "VsCode",
+        "NewsAPI",
+     ],
+     category: "fullstack",
+     github: "https://github.com/Nirosh-Edirisinghe/Ai-News-Application.git",
+     webapp: "#",
+   },
+   {
+     id: 0,
+     title: "Pharmacy Management and Billing System",
+     date: "jun 2023 - Nov 2023",
+     description:
+       "This System is a software solution designed to streamline pharmacy operations by managing inventory, processing sales, and generating bills efficiently.",
+     image:
+       parmacy1,
+     tags: ["Java", "MySQL", "NetBeans"],
+     category: "fullStack",
+     github: "https://github.com/Nirosh-Edirisinghe/pharmacy-management-system.git",
+     webapp: "#",
+   },
+   {
+    id: 10,
+    title: "Clothing Web Store",
+    date: "Jan 2025",
+    description:
+      "E-commerce Website featuring a Home page with product highlights and a Product Collection page with filtering, sorting, and search for an optimized shopping experience",
+    image:
+      ecommercec,
+    tags: ["React.js", "Tailwind CSS"],
+    category: "frontend",
+    github: "https://github.com/Nirosh-Edirisinghe/Ecommerse-site.git",
+    webapp: "#",
+  },
+   {
+     id: 1,
+     title: "Restaurant Point of Sale (POS) System",
+     date: "Jun 2022 - Nov 2022",
+     description:
+       "Restaurant (POS) System is designed to streamline restaurant operations by managing orders, processing payments, tracking inventory and improving customer.",
+     image:
+       pos,
+     tags: [
+       "C#",
+       "Visual Studio 2012",
+     ],
+     category: "fullStack",
+     github: "#",
+     webapp: "#",
+   },
+   {
+     id: 2,
+     title: " Coffee Shop Web",
+     date: "Dec 2024",
+     description:
+       "A fully responsive coffee shop website featuring six sections Hero, About, Menu, Testimonials, Gallery, and Contact, along with a navigation menu and footer.",
+     image:
+       cofeeshop,
+     tags: ["HTML", "CSS", "JavaScript"],
+     category: "frontend",
+     github: "https://github.com/Nirosh-Edirisinghe/cofee_shop_website.git",
+     webapp: "#",
+   },
+   {
+     id: 3,
+     title: "Restaurant Web",
+     date: "Dec 2024 ",
+     description:
+       "restaurant website offers a seamless and visually appealing experience with sections for Home, About, Menu, Awards, and Contact",
+     image:
+       resturant,
+     tags: ["React Js", "Modern UI & UX"],
+     category: "frontend",
+     github: "https://github.com/Nirosh-Edirisinghe/Resturant-Web.git",
+     webapp: "#",
+   },
+   
+   {
+     id: 4,
+     title: "Image Search App",
+     date: "2023",
+     description:
+        "image search web app allows users to search for images, view relevant details, and easily download the images. It is fully responsive, ensuring a seamless experience on both desktop and mobile devices.",
+     image:
+       imagesearch,
+     tags: ["HTML", "CSS", "JavaScript"],
+     category: "mini",
+     github: "https://github.com/Nirosh-Edirisinghe/Js_Image_Search_App.git",
+     webapp: "#",
+   },
+   {
+     id: 5,
+     title: "Weather App",
+     date: "2023",
+     description:
+     "weather app allows users to search for a location and view real-time weather details. It provides essential information such as temperature, humidity, and weather conditions.",
+     image:
+       weather,
+     tags: ["HTML", "CSS", "JavaScript"],
+     category: "mini",
+     github: "https://github.com/Nirosh-Edirisinghe/Js_weather_app.git",
+     webapp: "#",
+   },
+   {
+     id: 6,
+     title: "To-Do List App",
+     date: "2023",
+     description:
+     "To-do list app helps users manage tasks by adding, editing, and removing items from their to-do list. It offers a simple and intuitive interface, making task management easy.",
+     image:
+       todo,
+     tags: ["HTML", "CSS", "JavaScript"],
+     category: "mini",
+     github: "https://github.com/Nirosh-Edirisinghe/Todo-LIst.git",
+     webapp: "#",
+   },
+
+    {
+     id: 11,
+     title: "Movie Explorer App",
+     date: "2025",
+     description:
+     "Developed a responsive Movie Explorer web app using TMDb API that allows users to log in, search, and explore movies with detailed info like overview, genre, and trailer.",
+     image:
+       movie,
+     tags: ["Vite", "React", " Material-UI", "Axios", "TMDb API"],
+     category: "frontend",
+     github: "https://github.com/Nirosh-Edirisinghe/movie-explore-app.git",
+     webapp: "#",
+   },
+
+    {
+     id: 12,
+     title: "Tourism_Web",
+     date: "2025",
+     description:
+     "Traventorat is a simple and elegant tourism website. It provides users with a clean interface to explore travel options, learn about services, and easily get in touch for inquiries.",
+     image:
+       tourism,
+     tags: ["HTML", "CSS", "JavaScript"],
+     category: "frontend",
+     github: "https://github.com/Nirosh-Edirisinghe/Tourism_Web.git",
+     webapp: "#",
+   },
+  
+ ];
