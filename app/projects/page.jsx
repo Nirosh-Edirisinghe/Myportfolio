@@ -26,8 +26,8 @@ const MyProject = () => {
     <motion.section
       initial={{ opacity: 1 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="min-h-screen bg-white text-gray-900 px-6 md:px-16 py-10">
+      transition={{ duration: 1 }} 
+      className="min-h-screen bg-white text-gray-900 px-6 md:px-16 py-10  dark:bg-darkTheme  dark:text-white">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -42,7 +42,7 @@ const MyProject = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-gray-800 font-ovo">
+          className="text-gray-800 font-ovo  dark:text-white">
           I have worked on a wide range of projects. Here are some of my projects.
         </motion.p>
       </motion.div>
@@ -53,14 +53,14 @@ const MyProject = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
         className="flex justify-center mb-8">
-        <div className="flex flex-wrap justify-center bg-white border border-gray-300 rounded-full p-2 shadow-sm px-3 gap-2">
+        <div className="flex flex-wrap justify-center bg-white border border-gray-300 rounded-full p-2 shadow-sm px-3 gap-2 dark:border  dark:border-white/50 dark:bg-transparent">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === category
-                ? 'bg-black/80 text-white shadow-md'
-                : 'text-gray-700 hover:bg-black/10'
+                ? 'bg-black/80 text-white shadow-md dark:bg-darkHover'
+                : 'text-gray-700 hover:bg-black/10 dark:text-white/80'
                 }`}
             >
               {category}
@@ -74,9 +74,10 @@ const MyProject = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project, index) => (
 
-          <div
+          <motion.div
+          whileHover={{ scale: 1.05 }}
             key={index}
-            className="border border-gray-400 shadow-md rounded-2xl overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 transition-all cursor-pointer flex flex-col h-full"
+            className="border border-gray-400 shadow-md rounded-2xl overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 transition-all cursor-pointer flex flex-col h-full dark:hover:bg-darkHover dark:hover:shadow-white dark:border-gray-700"
           >
             <Image
               src={project.image}
@@ -92,17 +93,17 @@ const MyProject = () => {
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="bg-black/10 text-gray-700 text-sm px-3 py-1 rounded-full"
+                      className="bg-black/10 text-gray-700 text-sm px-3 py-1 rounded-full dark:bg-darkHover dark:text-white/70"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-lg font-semibold mb-1 text-gray-700">
+                <h3 className="text-lg font-semibold mb-1 text-gray-700 dark:text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-600 text-sm mb-4 dark:text-white/80">
                   {project.description}
                 </p>
               </div>
@@ -120,7 +121,7 @@ const MyProject = () => {
               </div>
 
             </div>
-          </div>
+          </motion.div>
 
         ))}
       </div>
