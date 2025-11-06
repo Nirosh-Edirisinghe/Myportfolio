@@ -60,6 +60,12 @@ import quickai from './quickai.png'
 import blogapp from './blogapp.png'
 import portfolio from './portfolio.png'
 import rnmovie from './rnmovie.jpg'
+import reactjs from './reactjs.png'
+import serverside from './serverside.png'
+import tailwind from './tailwind.jpg'
+import postman from './postman.png'
+import php from './php.png'
+import nodejs from './nodejs.png'
 
 
 
@@ -334,55 +340,55 @@ export const projects = [
     category: "fullstack",
     github: "https://github.com/Nirosh-Edirisinghe/Quick-Ai.git",
     webapp: "#",
-  },{
+  }, {
     id: 15,
-     title: "Blog App",
-     date: "Jul 2025",
-     description:
-       "A full-stack Blog Application built with Next.js, Tailwind CSS, MongoDB, and React Icons. This project allows users to add, delete, and view blog posts, along with an email subscription feature.",
-     image:
-       blogapp,
-     tags: [
-       "Next.js",
-       "MongoDB",
-       "TailwindCss",
-     ],
-     category: "fullstack",
-     github: "https://github.com/Nirosh-Edirisinghe/next-blog-app.git",
-     webapp: "#",
-  },{
+    title: "Blog App",
+    date: "Jul 2025",
+    description:
+      "A full-stack Blog Application built with Next.js, Tailwind CSS, MongoDB, and React Icons. This project allows users to add, delete, and view blog posts, along with an email subscription feature.",
+    image:
+      blogapp,
+    tags: [
+      "Next.js",
+      "MongoDB",
+      "TailwindCss",
+    ],
+    category: "fullstack",
+    github: "https://github.com/Nirosh-Edirisinghe/next-blog-app.git",
+    webapp: "#",
+  }, {
     id: 16,
-     title: "Portfolio Web",
-     date: "Mar 2025",
-     description:
-       "A dynamic and responsive portfolio website to showcase my skills, projects, and achievements. Built for a smooth user experience with clean design and interactive sections like About, Skills, Projects, Achievements, and Contact.",
-     image:
-       portfolio,
-     tags: [
-       "React Js",
-       "Vite",
-       "Styled Components",
-     ],
-     category: "frontend",
-     github: "https://github.com/Nirosh-Edirisinghe/portfolio.git",
-     webapp: "#",
-  },{
+    title: "Portfolio Web",
+    date: "Mar 2025",
+    description:
+      "A dynamic and responsive portfolio website to showcase my skills, projects, and achievements. Built for a smooth user experience with clean design and interactive sections like About, Skills, Projects, Achievements, and Contact.",
+    image:
+      portfolio,
+    tags: [
+      "React Js",
+      "Vite",
+      "Styled Components",
+    ],
+    category: "frontend",
+    github: "https://github.com/Nirosh-Edirisinghe/portfolio.git",
+    webapp: "#",
+  }, {
     id: 17,
-     title: "Movie Explorer Mobile App (React Native)",
-     date: "Oct 2025",
-     description:
-       "A modern Expo React Native app to explore trending and latest movies using TMDb API, Appwrite backend, and Tailwind CSS for sleek, responsive UI.",
-     image:
-       rnmovie,
-     tags: [
-       "React Native",
-       "Typescript",
-       "TailwindCss",
-	   "Expo-cli",
-     ],
-     category: "mobile",
-     github: "https://github.com/Nirosh-Edirisinghe/React_native_movie_app.git",
-     webapp: "#"
+    title: "Movie Explorer Mobile App (React Native)",
+    date: "Oct 2025",
+    description:
+      "A modern Expo React Native app to explore trending and latest movies using TMDb API, Appwrite backend, and Tailwind CSS for sleek, responsive UI.",
+    image:
+      rnmovie,
+    tags: [
+      "React Native",
+      "Typescript",
+      "TailwindCss",
+      "Expo-cli",
+    ],
+    category: "mobile",
+    github: "https://github.com/Nirosh-Edirisinghe/React_native_movie_app.git",
+    webapp: "#"
   }
 
 ];
@@ -487,6 +493,76 @@ export const achivements = [
     github: "#",
 
   },
-
+  {
+    id: 9,
+    title: "Postman API Fundamentals Student Expert",
+    date: "Postman - Jun 2025",
+    image: postman,
+    tags: [
+      "GET, POST, PATCH, and DELETE requests",
+      "Query parameters"
+    ],
+    github: "#",
+  },
+  {
+    id: 10,
+    title: "React Js From Beginner to Expert ",
+    date: "Udemy - Jul 2025",
+    image: reactjs,
+    tags: [
+      "Fundamentals",
+      "Routing",
+      "API Integration",
+    ],
+    github: "#",
+  },
+  {
+    id: 11,
+    title: "Server-side Web Programming ",
+    date: "University of Moratuwa - Sep 2025",
+    image: serverside,
+    tags: [
+      "Node Js",
+      "Express Js",
+      "REST APIs",
+      "web server security"
+    ],
+    github: "#",
+  },
+  {
+    id: 12,
+    title: "Introduction to PHP",
+    date: "Simplilearn - Sep 2025",
+    image: php,
+    tags: [
+      "OOP in PHP",
+      "Form validation",
+      "CRUD operation",
+    ],
+    github: "#",
+  },
+  {
+    id: 13,
+    title: "TailwindCss",
+    date: "Udemy - Oct 2025",
+    image: tailwind,
+    tags: [
+      "Tailwind CSS",
+    ],
+    github: "#",
+  },
+  {
+    id: 14,
+    title: "Node Js",
+    date: "Simplilearn - Oct 2025",
+    image: nodejs,
+    tags: [
+      "Node JS Architecture",
+      "NPM",
+      "JWT Authentication",
+      "MongoDB",
+    ],
+    github: "#",
+  },
 
 ]
