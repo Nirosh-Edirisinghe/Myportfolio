@@ -20,11 +20,11 @@ const MyProject = () => {
       )
 
 
-  const categories = ['All', 'FullStack', 'FrontEnd', 'Mini']
+  const categories = ['All', 'FullStack', 'FrontEnd', 'Mobile', 'Mini']
 
   return (
     <motion.section
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 1 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="min-h-screen bg-white text-gray-900 px-6 md:px-16 py-10">
