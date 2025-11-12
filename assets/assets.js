@@ -66,6 +66,12 @@ import tailwind from './tailwind.jpg'
 import postman from './postman.png'
 import php from './php.png'
 import nodejs from './nodejs.png'
+import reacticon from './reactjsicon.png'
+import nodeicon from './nodeicon.png'
+import laravelticon from './laravelicon.png'
+import mysqlticon from './mysqlicon.png'
+import expressicon from './expressicon.png'
+import posgreeicon from './posgreeicon.png'
 
 
 
@@ -107,7 +113,13 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
-  myprofile
+  myprofile,
+  reacticon,
+  nodeicon,
+  laravelticon,
+  mysqlticon,
+  expressicon,
+  posgreeicon,
 };
 
 export const workData = [
@@ -147,7 +159,7 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+  assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git,
 ];
 
 export const projects = [

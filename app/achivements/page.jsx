@@ -13,7 +13,7 @@ const Myachivements = () => {
       initial={{ opacity: 1 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="min-h-screen bg-white text-gray-900 px-6 md:px-16 py-10">
+      className="min-h-screen bg-white text-gray-900 px-6 md:px-16 py-10  dark:bg-darkTheme  dark:text-white">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -28,7 +28,7 @@ const Myachivements = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-gray-800 font-ovo">
+          className="text-gray-800 font-ovo dark:text-white">
           Here are some of my Achivemets.
         </motion.p>
       </motion.div>
@@ -37,9 +37,10 @@ const Myachivements = () => {
        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {achivements.map((item, index) => (
 
-          <div
+          <motion.div
+          whileHover={{ scale: 1.03 }}
             key={index}
-            className="border border-gray-400 shadow-md rounded-2xl overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 transition-all cursor-pointer flex flex-col h-full"
+            className="border border-gray-400 shadow-md rounded-2xl overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 transition-all cursor-pointer flex flex-col h-full dark:hover:bg-darkHover dark:hover:shadow-white dark:border-gray-700"
           >
             <Image
               src={item.image}
@@ -55,21 +56,21 @@ const Myachivements = () => {
                   {item.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="bg-black/10 text-gray-700 text-xs px-2 py-1 rounded-full"
+                      className="bg-black/10 text-gray-700 text-xs px-2 py-1 rounded-full dark:bg-darkHover dark:text-white/70"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-sm font-semibold mb-1 text-gray-700">
+                <h3 className="text-sm font-semibold mb-1 text-gray-700 dark:text-white">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-600 text-sm mb-4 dark:text-white/80">
                   {item.date}
                 </p>
               </div>
-
+ 
               {/* <div className='flex justify-center '>
                 <a
                   href={item.github}
@@ -83,7 +84,7 @@ const Myachivements = () => {
               </div> */}
 
             </div>
-          </div>
+          </motion.div>
 
         ))}
       </div>

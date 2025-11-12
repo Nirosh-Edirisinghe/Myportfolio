@@ -75,7 +75,7 @@ const MyProject = () => {
         {filteredProjects.map((project, index) => (
 
           <motion.div
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.03 }}
             key={index}
             className="border border-gray-400 shadow-md rounded-2xl overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 transition-all cursor-pointer flex flex-col h-full dark:hover:bg-darkHover dark:hover:shadow-white dark:border-gray-700"
           >

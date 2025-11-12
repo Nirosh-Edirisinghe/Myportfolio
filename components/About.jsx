@@ -93,6 +93,9 @@ const About = ({ isDarkMode }) => {
               </motion.li>
             ))}
           </motion.ul>
+
+          
+
         </motion.div>
       </motion.div>
     </motion.div>
