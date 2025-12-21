@@ -124,6 +124,18 @@ export const assets = {
   esupport,
 };
 
+export const Bio = {
+  roles: [
+    "ICT Undergraduate",
+    "Frontend Developer",
+    "FullStack Developer",
+  ],
+  github: "https://github.com/Nirosh-Edirisinghe",
+  linkedin: "https://www.linkedin.com/in/nirosh-edirisinghe-a13663329/",
+  insta: "https://www.instagram.com/niroshedirisighe/",
+  facebook: "https://www.facebook.com/nirosh.edirisingha.3",
+}
+
 export const workData = [
   {
     id: 13,
