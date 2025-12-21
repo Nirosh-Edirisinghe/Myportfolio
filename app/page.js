@@ -9,6 +9,7 @@ import Services from "@/components/Services";
 import Work from "@/components/Work";
 import { useEffect, useState } from "react";
 import Skills from "@/components/Skills";
+import JourneySection from "@/components/JourneySection";
 
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
       <Header isDarkMode={isDarkMode}/>
       <About isDarkMode={isDarkMode}/>
       <Skills/>
+      <JourneySection/>
       <Services isDarkMode={isDarkMode}/>
       <Work isDarkMode={isDarkMode}/>
       <Contact isDarkMode={isDarkMode}/>

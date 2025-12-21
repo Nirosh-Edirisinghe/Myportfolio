@@ -72,6 +72,7 @@ import laravelticon from './laravelicon.png'
 import mysqlticon from './mysqlicon.png'
 import expressicon from './expressicon.png'
 import posgreeicon from './posgreeicon.png'
+import esupport from './esupport.png'
 
 
 
@@ -120,29 +121,82 @@ export const assets = {
   mysqlticon,
   expressicon,
   posgreeicon,
+  esupport,
 };
 
 export const workData = [
   {
-    title: 'Frontend project',
-    description: 'Web Design',
-    bgImage: '/work-1.png',
+    id: 13,
+    title: "Doctor Appointment Booking System (MERN Stack)",
+    date: "Sep 2025 - Oct 2025",
+    description:
+      "A full-stack Doctor Appointment Booking System built using the MERN Stack.It features 3-level authentication for patients, doctors, and admins, allowing secure booking, profile management, and appointment control.",
+    image:
+      appoinmenst,
+    tags: [
+      "MERN Stack",
+      "Jwt authentication",
+      "TailwindCss",
+      "RestAPIs",
+    ],
+    category: "fullstack",
+    github: "https://github.com/Nirosh-Edirisinghe/Doctor-Appointment-Booking.git",
+    webapp: "#",
+  }, {
+    id: 14,
+    title: "Quick AI – AI SaaS Application",
+    date: "Jul 2025 - Aug 2025",
+    description:
+      "This is a full-stack AI SaaS application built with the PERN stack that integrates subscription billing and AI-powered tools. It’s designed for scalability, performance, and modern SaaS workflows.",
+    image:
+      quickai,
+    tags: [
+      "PERN stack",
+      "Gemini API",
+      "TailwindCss",
+      "Clipdrop API",
+      "Cloudinary",
+    ],
+    category: "fullstack",
+    github: "https://github.com/Nirosh-Edirisinghe/Quick-Ai.git",
+    webapp: "#",
+  }, {
+    id: 15,
+    title: "Blog App",
+    date: "Jul 2025",
+    description:
+      "A full-stack Blog Application built with Next.js, Tailwind CSS, MongoDB, and React Icons. This project allows users to add, delete, and view blog posts, along with an email subscription feature.",
+    image:
+      blogapp,
+    tags: [
+      "Next.js",
+      "MongoDB",
+      "TailwindCss",
+    ],
+    category: "fullstack",
+    github: "https://github.com/Nirosh-Edirisinghe/next-blog-app.git",
+    webapp: "#",
   },
-  {
-    title: 'Geo based app',
-    description: 'Mobile App',
-    bgImage: '/work-2.png',
-  },
-  {
-    title: 'Photography site',
-    description: 'Web Design',
-    bgImage: '/work-3.png',
-  },
-  {
-    title: 'UI/UX designing',
-    description: 'UI/UX Design',
-    bgImage: '/work-4.png',
-  },
+  // {
+  //   title: 'Frontend project',
+  //   description: 'Web Design',
+  //   bgImage: '/work-1.png',
+  // },
+  // {
+  //   title: 'Geo based app',
+  //   description: 'Mobile App',
+  //   bgImage: '/work-2.png',
+  // },
+  // {
+  //   title: 'Photography site',
+  //   description: 'Web Design',
+  //   bgImage: '/work-3.png',
+  // },
+  // {
+  //   title: 'UI/UX designing',
+  //   description: 'UI/UX Design',
+  //   bgImage: '/work-4.png',
+  // },
 ]
 
 export const serviceData = [

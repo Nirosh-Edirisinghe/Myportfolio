@@ -2,65 +2,189 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
+
 
 const Header = () => {
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2 pt-4'>
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-      >
-        <Image src={assets.myprofile} alt='' className='rounded-full w-32' />
-      </motion.div>
+    // <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2 pt-4'>
+    //   <motion.div
+    //     initial={{ scale: 0 }}
+    //     whileInView={{ scale: 1 }}
+    //     transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+    //   >
+    //     <Image src={assets.myprofile} alt='' className='rounded-full w-32' />
+    //   </motion.div>
 
-      <motion.h3
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'
-      >
-        Hi I'm Nirosh Edirisinghe
-        <Image src={assets.hand_icon} alt='' className='w-6' />
-      </motion.h3>
+    //   <motion.h3
+    //     initial={{ y: -20, opacity: 0 }}
+    //     whileInView={{ y: 0, opacity: 1 }}
+    //     transition={{ duration: 0.6, delay: 0.3 }}
+    //     className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'
+    //   >
+    //     Hi I'm Nirosh Edirisinghe
+    //     <Image src={assets.hand_icon} alt='' className='w-6' />
+    //   </motion.h3>
 
-      <motion.h1
-        initial={{ y: -30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'
-      >
-        Web developer based in Sri Lanka
-      </motion.h1>
+    //   <motion.h1
+    //     initial={{ y: -30, opacity: 0 }}
+    //     whileInView={{ y: 0, opacity: 1 }}
+    //     transition={{ duration: 0.8, delay: 0.5 }}
+    //     className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'
+    //   >
+    //     Web developer based in Sri Lanka
+    //   </motion.h1>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
-        className='max-w-2xl mx-auto font-ovo'
-      >I am a web developer from Sri Lanka, with 1 year of experience in muliple comapnies.
-      </motion.p>
+    //   <motion.p
+    //     initial={{ opacity: 0 }}
+    //     whileInView={{ opacity: 1 }}
+    //     transition={{ duration: 0.6, delay: 0.7 }}
+    //     className='max-w-2xl mx-auto font-ovo'
+    //   >I am a web developer from Sri Lanka, with 1 year of experience in muliple comapnies.
+    //   </motion.p>
 
-      <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-        <motion.a
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent' href="#conatct"
+    //   <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
+    //     <motion.a
+    //       initial={{ y: 30, opacity: 0 }}
+    //       whileInView={{ y: 0, opacity: 1 }}
+    //       transition={{ duration: 0.6, delay: 1 }}
+    //       className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent' href="#conatct"
+    //     >
+    //       Conatct me <Image src={assets.right_arrow_white} alt='' className='w-4' />
+    //     </motion.a>
+
+    //     <motion.a
+    //       initial={{ y: 30, opacity: 0 }}
+    //       whileInView={{ y: 0, opacity: 1 }}
+    //       transition={{ duration: 0.6, delay: 1.2 }}
+    //       href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'
+    //     >
+    //       my resume <Image src={assets.download_icon} alt='' className='w-4' />
+    //     </motion.a >
+    //   </div>
+    // </div>
+
+
+    <div className='relative w-full h-screen flex items-center justify-center'>
+
+      {/* --- MOBILE SOCIAL ICONS (top center) --- */}
+      <div className='flex md:hidden justify-center gap-5 absolute bottom-10 w-full'>
+        <a href="#"><FaFacebookF className="text-black text-2xl hover:scale-110 transition" /></a>
+        <a href="#"><FaInstagram className="text-black text-2xl hover:scale-110 transition" /></a>
+        <a href="#"><FaLinkedinIn className="text-black text-2xl hover:scale-110 transition" /></a>
+        <a href="#"><FaGithub className="text-black text-2xl hover:scale-110 transition" /></a>
+      </div>
+
+      {/* --- DESKTOP RIGHT SIDE SOCIAL ICONS --- */}
+      <div className='hidden md:flex flex-col gap-10 absolute right-10 top-1/2 -translate-y-1/2'>
+        <a href="#">
+          <div className="relative group">
+            <span
+              className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100  group-hover:-translate-y-3 translate-y-1 group-hover:scale-100  scale-95  bg-white text-gray-800 border border-gray-800 text-xs px-2 py-1 rounded transition-all duration-300 delay-100" >
+              Facebook
+            </span>
+            <FaFacebookF className="text-gray-700 text-2xl hover:scale-110 transition" />
+          </div>
+        </a>
+
+
+        <a href="#">
+          {/* Instagram */}
+          <div className="relative group">
+            <span className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100  group-hover:-translate-y-3 translate-y-1 group-hover:scale-100  scale-95  bg-white text-gray-800 border border-gray-800 text-xs px-2 py-1 rounded transition-all duration-300 delay-100" >
+              Instagram
+            </span>
+            <FaInstagram className="text-gray-700 text-2xl hover:scale-110 transition" />
+          </div>
+        </a>
+
+        <a href="#">
+          {/* LinkedIn */}
+          <div className="relative group">
+            <span className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100  group-hover:-translate-y-3 translate-y-1 group-hover:scale-100  scale-95  bg-white text-gray-800 border border-gray-800 text-xs px-2 py-1 rounded transition-all duration-300 delay-100" >
+              LinkedIn
+            </span>
+            <FaLinkedinIn className="text-gray-700 text-2xl hover:scale-110 transition" />
+          </div>
+        </a>
+
+        <a href="#">
+          {/* GitHub */}
+          <div className="relative group">
+            <span className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100  group-hover:-translate-y-3 translate-y-1 group-hover:scale-100  scale-95  bg-white text-gray-800 border border-gray-800 text-xs px-2 py-1 rounded transition-all duration-300 delay-100" >
+              GitHub
+            </span>
+            <FaGithub className="text-gray-700 text-2xl hover:scale-110 transition" />
+          </div>
+        </a>
+      </div>
+
+      {/* --- MAIN CENTER CONTENT --- */}
+      <div className='w-11/12 max-w-3xl text-center mx-auto flex flex-col items-center justify-center gap-2 pt-4'>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
         >
-          Conatct me <Image src={assets.right_arrow_white} alt='' className='w-4' />
-        </motion.a>
+          <Image src={assets.myprofile} alt='' className='rounded-full w-32' />
+        </motion.div>
 
-        <motion.a
-          initial={{ y: 30, opacity: 0 }}
+        <motion.h3
+          initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'
         >
-          my resume <Image src={assets.download_icon} alt='' className='w-4' />
-        </motion.a >
+          Hi I'm Nirosh Edirisinghe
+          <Image src={assets.hand_icon} alt='' className='w-6' />
+        </motion.h3>
+
+        <motion.h1
+          initial={{ y: -30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'
+        >
+          Web developer based in Sri Lanka
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className='max-w-2xl mx-auto font-ovo'
+        >
+          I am a web developer from Sri Lanka, with 1 year of experience in multiple companies.
+        </motion.p>
+
+        <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
+          <motion.a
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
+            href="#contact"
+          >
+            Contact me <Image src={assets.right_arrow_white} alt='' className='w-4' />
+          </motion.a>
+
+          <motion.a
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            href="/sample-resume.pdf"
+            download
+            className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'
+          >
+            My Resume <Image src={assets.download_icon} alt='' className='w-4' />
+          </motion.a>
+        </div>
       </div>
     </div>
+
+
+
+
   )
 }
 

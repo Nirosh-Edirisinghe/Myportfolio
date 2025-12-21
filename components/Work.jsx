@@ -40,12 +40,12 @@ const Work = ({ isDarkMode }) => {
         Welcome to my web development portfolio Explore a xollection of projects showcasing my expertise in web development.
       </motion.p>
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className='grid  grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 dark:text-black'>
-        {
+        className='grid  grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 dark:text-black'> */}
+      {/* {
           workData.map((project, index) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -66,8 +66,197 @@ const Work = ({ isDarkMode }) => {
 
             </motion.div>
           ))
-        }
+        } */}
+
+      {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {workData.map((project, index) => (
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+              key={index}
+              className="py-2 border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer bg-white dark:bg-darkHover/40 overflow-hidden"
+            >
+
+              
+              <div className="w-full h-36 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              
+              <div className="p-4 flex flex-col h-full justify-between">
+
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 dark:text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                    {project.description}
+                  </p>
+                </div>
+
+               
+                <div className="mt-4 flex justify-end">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className=" flex items-center gap-2 border border-gray-400 dark:border-gray-600 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition"
+                  >
+                    GitHub
+                    <Image
+                      src={assets.send_icon}
+                      className="w-4 opacity-70"
+                      alt="send"
+                    />
+                  </a>
+                </div>
+
+              </div>
+            </motion.div>
+          ))}
+        </div> */}
+
+      {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {workData.map((project, index) => (
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+              key={index}
+              className="p-1 border border-gray-300 dark:border-gray-700 
+      rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 
+      cursor-pointer bg-white dark:bg-darkHover/40 overflow-hidden 
+      flex flex-col h-full"
+            >
+
+             
+              <div className="w-full h-50 overflow-hidden rounded-xl">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex flex-wrap gap-2 mt-5">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="bg-black/10 text-gray-700 text-xs px-2 py-0.5 rounded-full dark:bg-darkHover dark:text-white/70"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+           
+              <div className="p-4 flex flex-col justify-between h-full">
+
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 dark:text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                    {project.description}
+                  </p>
+                </div>
+
+               
+                <div className="mt-4 flex justify-end">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="flex items-center gap-2 border border-gray-400 
+            dark:border-gray-600 px-3 py-1 rounded-full text-sm 
+            hover:bg-black hover:text-white dark:hover:bg-white 
+            dark:hover:text-black transition"
+                  >
+                    GitHub
+                    <Image
+                      src={assets.send_icon}
+                      className="w-4 opacity-70"
+                      alt="send"
+                    />
+                  </a>
+                </div>
+
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+
+      </motion.div> */}
+
+
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 dark:text-black"
+      >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {workData.map((project, index) => (
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              key={index}
+              className="p-1 border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 duration-500 cursor-pointer bg-white  dark:bg-darkHover/40 overflow-hidden flex flex-col h-full "
+            >
+              {/* Image */}
+              <div className="w-full h-40 overflow-hidden rounded-xl">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mt-3">
+                {project.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="bg-black/10 text-gray-700 text-xs px-2 py-0.5 rounded-full dark:bg-darkHover dark:text-white/70"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Content */}
+              <div className="p-3 flex flex-col justify-between flex-grow">
+                <div>
+                  <h3 className="text-base font-semibold text-gray-800 dark:text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Github Button */}
+                <div className="mt-4 flex justify-end">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="flex items-center gap-2 border border-gray-400 dark:border-gray-600 px-3 py-1 rounded-full text-sm hover:shadow-black dark:hover:bg-white dark:hover:text-black transition"
+                  >
+                    GitHub
+                    <Image
+                      src={assets.send_icon}
+                      className="w-4 opacity-70"
+                      alt="send"
+                    />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
+
 
       <motion.a
         initial={{ opacity: 0 }}
