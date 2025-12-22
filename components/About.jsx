@@ -3,18 +3,18 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
 
-const About = ({ isDarkMode }) => { 
+const About = ({ isDarkMode }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
+      id='about' className='w-full px-[12%] py-4 scroll-mt-20'>
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className='text-center mb-2 text-lg font-ovo'
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className='text-center mb-1 text-lg font-ovo'
       >
         Introduction
       </motion.h4>
@@ -23,7 +23,7 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className='text-center text-5xl font-ovo'
+        className='text-center text-5xl text-gray-800 font-ovo dark:text-gray-200'
       >
         About me
       </motion.h2>
@@ -32,7 +32,7 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0, }}
         whileInView={{ opacity: 1, }}
         transition={{ duration: 0.8 }}
-        className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+        className='flex w-full flex-col lg:flex-row items-center gap-20 my-10'>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -73,15 +73,17 @@ const About = ({ isDarkMode }) => {
           <motion.h4
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className='my-6 text-gray-700 font-ovo dark:text-white/80'
           >
             Tool I use
           </motion.h4>
+
+
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className='flex items-center gap-3 sm:gap-5' >
             {toolsData.map((tool, index) => (
               <motion.li
@@ -94,7 +96,6 @@ const About = ({ isDarkMode }) => {
             ))}
           </motion.ul>
 
-          
 
         </motion.div>
       </motion.div>
