@@ -9,24 +9,45 @@ import nexticon from '../assets/nextjsicon.png'
 
 import Image from "next/image";
 import { assets } from "@/assets/assets";
+import { motion } from "motion/react"
 
 export default function Skills() {
   return (
-    <section className="py-10">
-      <h4 className='text-center mb-2 text-lg font-ovo'
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="py-10">
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className='text-center mb-2 text-lg font-ovo'
       >
         My Skills
-      </h4>
+      </motion.h4>
 
-      <h2
-        className='text-center text-5xl font-ovo'
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className='text-center text-5xl text-gray-800 font-ovo dark:text-gray-200'
       >
         Technical Arsenal
-      </h2>
-      <div className="max-w-6xl mx-auto px-6 mt-8 grid md:grid-cols-2 gap-10">
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.9 }}
+        className="max-w-6xl mx-auto px-6 mt-10 grid md:grid-cols-2 gap-10">
         {/* Frontend Section */}
-        <div className="shadow-md rounded-2xl border-[0.5px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/50">
-          <h2 className="text-2xl font-semibold text-center mb-6">Frontend</h2>
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1.1, duration: 0.6 }}
+          className="shadow-md rounded-2xl border-[2px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/10">
+          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 dark:text-gray-400">Frontend</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-600 dark:text-white/80">
             <SkillCard icon={<FaReact className="text-sky-500" />} name="React Js" />
             <SkillCard
@@ -47,17 +68,21 @@ export default function Skills() {
             <SkillCard icon={<FaBootstrap className="text-purple-600" />} name="Bootstrap" />
             <SkillCard
               icon={<Image src={muiicon} alt="HTML" className="w-8 h-8" />}
-              name="Material Ui"
+              name="MUI"
             />
             <SkillCard icon={<FaFigma className="text-pink-500" />} name="Figma" />
 
 
           </div>
-        </div>
+        </motion.div >
 
         {/* Others Section */}
-        <div className="shadow-md rounded-2xl border-[0.5px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/50">
-          <h2 className="text-2xl font-semibold text-center mb-6">Backend</h2>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1.1, duration: 0.6 }}
+          className="shadow-md rounded-2xl border-[2px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/10">
+          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 dark:text-gray-400">Backend</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-600 dark:text-white/80">
             <SkillCard
               icon={<FaPython className="text-yellow-500 text-4xl" />}
@@ -90,15 +115,15 @@ export default function Skills() {
 
 
           </div>
-        </div>
-      </div>
-    </section>
+        </motion.div >
+      </motion.div>
+    </motion.section >
   );
 }
 
 function SkillCard({ icon, name }) {
   return (
-    <div className="flex items-center gap-2 border-[0.5px] border-gray-200 rounded-xl p-3 hover:shadow-md transition duration-200  bg-gray-50 dark:bg-transparent dark:border-white/20">
+    <div className="flex items-center gap-2 border-[0.5px] border-gray-300 rounded-xl p-3 hover:shadow-xl transition duration-200  bg-gray-100 dark:bg-transparent dark:border-white/20">
       <span className="text-2xl">{icon}</span>
       <p className="font-medium">{name}</p>
     </div>
