@@ -46,7 +46,7 @@ export default function Skills() {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.6 }}
-          className="shadow-md rounded-2xl border-[2px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/10">
+          className="shadow-md rounded-2xl border-[2px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/20">
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 dark:text-gray-400">Frontend</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-600 dark:text-white/80">
             <SkillCard icon={<FaReact className="text-sky-500" />} name="React Js" />
@@ -81,7 +81,7 @@ export default function Skills() {
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.6 }}
-          className="shadow-md rounded-2xl border-[2px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/10">
+          className="shadow-md rounded-2xl border-[2px] border-gray-200 p-8 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white/20 dark:hover:shadow-white dark:hover:bg-darkHover/20">
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 dark:text-gray-400">Backend</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-600 dark:text-white/80">
             <SkillCard

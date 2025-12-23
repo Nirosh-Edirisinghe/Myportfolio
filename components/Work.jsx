@@ -26,7 +26,7 @@ const Work = ({ isDarkMode }) => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className='text-center text-5xl font-ovo'
+        className='text-center text-5xl text-gray-800 font-ovo dark:text-gray-200'
       >
         My latest work
       </motion.h2>
@@ -197,12 +197,16 @@ const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.9 }}
         className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 dark:text-black"
       >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {workData.map((project, index) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
               key={index}
-              className="p-1 border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 duration-500 cursor-pointer bg-white  dark:bg-darkHover/40 overflow-hidden flex flex-col h-full "
+              className="p-1 border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 duration-500 cursor-pointer overflow-hidden flex flex-col h-full dark:hover:bg-darkHover/20 "
             >
               {/* Image */}
               <div className="w-full h-40 overflow-hidden rounded-xl">
@@ -214,7 +218,7 @@ const Work = ({ isDarkMode }) => {
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mt-3">
+              <div className="flex flex-wrap gap-2 mt-3 px-2">
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
@@ -228,10 +232,10 @@ const Work = ({ isDarkMode }) => {
               {/* Content */}
               <div className="p-3 flex flex-col justify-between flex-grow">
                 <div>
-                  <h3 className="text-base font-semibold text-gray-800 dark:text-white">
+                  <h3 className="text-base font-semibold text-gray-800 dark:text-gray-300">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
                     {project.description}
                   </p>
                 </div>
@@ -241,12 +245,12 @@ const Work = ({ isDarkMode }) => {
                   <a
                     href={project.github}
                     target="_blank"
-                    className="flex items-center gap-2 border border-gray-400 dark:border-gray-600 px-3 py-1 rounded-full text-sm hover:shadow-black dark:hover:bg-white dark:hover:text-black transition"
+                    className="flex items-center gap-2 border border-gray-400 dark:border-gray-600 px-3 py-1 rounded-full text-sm hover:shadow-black dark:hover:shadow-white  transition dark:text-gray-300"
                   >
                     GitHub
                     <Image
-                      src={assets.send_icon}
-                      className="w-4 opacity-70"
+                      src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+                      className="w-3 opacity-70"
                       alt="send"
                     />
                   </a>
@@ -254,16 +258,16 @@ const Work = ({ isDarkMode }) => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
 
 
       <motion.a
-       onClick={() => router.push("/projects")}
+        onClick={() => router.push("/projects")}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.1 }}
-         className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-2 px-10 mx-auto my-10 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover'>
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-300 shadow-xl cursor-pointer rounded-full py-2 px-10 mx-auto my-10 hover:bg-lightHover duration-500 dark:text-white dark:border-gray-700 dark:hover:bg-darkHover/30'>
         Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='Right arrow' className='w-4' />
       </motion.a>
 

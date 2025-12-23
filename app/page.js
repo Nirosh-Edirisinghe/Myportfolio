@@ -42,7 +42,7 @@ export default function Home() {
       <About isDarkMode={isDarkMode}/>
       <Skills/>
       <JourneySection/>
-      <Services isDarkMode={isDarkMode}/>
+      {/* <Services isDarkMode={isDarkMode}/> */}
       <Work isDarkMode={isDarkMode}/>
       <Contact isDarkMode={isDarkMode}/>
       <Footer isDarkMode={isDarkMode}/>
