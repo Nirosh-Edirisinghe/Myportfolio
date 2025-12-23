@@ -2,10 +2,13 @@
 import { assets, Bio } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
+import { useRouter } from "next/navigation";
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
+
+  const router = useRouter();
 
   const openMenu = () => {
     sideMenuRef.current.style.transform = 'translate(-16rem)'
@@ -35,7 +38,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <ul className={`hidden md:flex  items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white/50 shadow-sm bg-opacity-50 dark:border  dark:border-white/50 dark:bg-transparent"}`}>
           <li><a className='font-ovo' href="#top">Home</a></li>
           <li><a className='font-ovo' href="#about">About me</a></li>
-          <li><a className='font-ovo' href="#services">Services</a></li>
+          <li className='cursor-pointer'><a className='font-ovo' onClick={() => router.push("/achivements")}>Achievements</a></li>
           <li><a className='font-ovo' href="#work">My Work</a></li>
           <li><a className='font-ovo' href="#contact">Contact me</a></li>
         </ul>
@@ -58,7 +61,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </div>
           <li onClick={closeMenu}><a className='font-ovo' href="#top">Home</a></li>
           <li onClick={closeMenu}><a className='font-ovo' href="#about">About me</a></li>
-          <li onClick={closeMenu}><a className='font-ovo' href="#services">Services</a></li>
+          <li onClick={closeMenu}><a className='font-ovo' onClick={() => router.push("/achivements")}>Achievements</a></li>
           <li onClick={closeMenu}><a className='font-ovo' href="#work">My Work</a></li>
           <li onClick={closeMenu}><a className='font-ovo' href="#contact">Contact me</a></li>
         </ul>

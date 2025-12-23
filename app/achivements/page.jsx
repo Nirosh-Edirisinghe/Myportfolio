@@ -23,7 +23,7 @@ const Myachivements = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center text-5xl font-ovo mb-3">My Achivemets</motion.h1>
+          className="text-center text-5xl text-gray-800 font-ovo dark:text-gray-200 mb-3">My Achivemets</motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const Myachivements = () => {
           <motion.div
           whileHover={{ scale: 1.03 }}
             key={index}
-            className="border border-gray-400 shadow-md rounded-2xl overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 transition-all cursor-pointer flex flex-col h-full dark:hover:bg-darkHover dark:hover:shadow-white dark:border-gray-700"
+            className="border border-gray-400 shadow-md rounded-2xl overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 transition-all cursor-pointer flex flex-col h-full dark:hover:bg-darkHover/20 dark:hover:shadow-white dark:border-gray-700"
           >
             <Image
               src={item.image}
@@ -63,10 +63,10 @@ const Myachivements = () => {
                   ))}
                 </div>
 
-                <h3 className="text-sm font-semibold mb-1 text-gray-700 dark:text-white">
+                <h3 className="text-sm font-semibold mb-1 text-gray-800 dark:text-gray-300">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 dark:text-white/80">
+                <p className="text-gray-600 text-sm mb-4 dark:text-gray-400">
                   {item.date}
                 </p>
               </div>

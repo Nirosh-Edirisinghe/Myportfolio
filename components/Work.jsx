@@ -200,7 +200,7 @@ const Work = ({ isDarkMode }) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {workData.map((project, index) => (
             <motion.div
