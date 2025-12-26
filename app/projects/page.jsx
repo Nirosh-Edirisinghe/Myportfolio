@@ -71,7 +71,7 @@ const MyProject = () => {
 
 
       {/* Project Cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <motion.div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project, index) => (
 
           <motion.div
@@ -124,7 +124,7 @@ const MyProject = () => {
           </motion.div>
 
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   )
 }
