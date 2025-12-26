@@ -11,7 +11,7 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Niroh - Portfolio",
+  title: "Niroh Editisinghe",
   description: "",
 };
 
