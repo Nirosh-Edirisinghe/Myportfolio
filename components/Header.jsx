@@ -199,7 +199,7 @@ const Header = () => {
             My Resume <Image src={assets.download_icon} alt='' className='w-4' />
           </motion.a> */}
           <a
-  href="/Nirosh_Edirisinghe_Resume.pdf"
+  href="/Myportfolio/Nirosh_Edirisinghe_Resume.pdf"
   download="Nirosh_Edirisinghe_Resume.pdf"
 >
   <motion.span
