@@ -136,7 +136,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className='flex items-end gap-2 text-2xl md:text-3xl mb-3  font-ovo'
         >
-         Nirosh Edirisinghe
+          Nirosh Edirisinghe
           {/* <Image src={assets.hand_icon} alt='' className='w-6' /> */}
           <FaCheckCircle className="text-blue-500 w-5 h-5 mb-1" />
         </motion.h3>
@@ -156,7 +156,7 @@ const Header = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-3xl sm:text-6xl lg:text-[50px] text-gray-800 font-semibold font-outfit dark:text-gray-300"
         >
-          I am a{' '} 
+          I am a{' '}
           <span className="text-primary">
             <Typewriter
               words={Bio.roles}
@@ -188,29 +188,29 @@ const Header = () => {
             Contact me <Image src={assets.right_arrow_white} alt='' className='w-4' />
           </motion.a>
 
-          {/* <motion.a
+          <motion.a
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            href="/Nirosh_Edirisinghe_Resume.pdf"
+            href="/Myportfolio/Nirosh_Edirisinghe_Resume.pdf"
             download
             className='px-8 py-2 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'
           >
             My Resume <Image src={assets.download_icon} alt='' className='w-4' />
-          </motion.a> */}
-          <a
-  href="/Myportfolio/Nirosh_Edirisinghe_Resume.pdf"
-  download="Nirosh_Edirisinghe_Resume.pdf"
->
-  <motion.span
-    initial={{ y: 30, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.6, delay: 1.2 }}
-    className="px-8 py-2 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
-  >
-    My Resume <Image src={assets.download_icon} alt="" className="w-4" />
-  </motion.span>
-</a>
+          </motion.a>
+          {/* <a
+            href="/Myportfolio/Nirosh_Edirisinghe_Resume.pdf"
+            download="Nirosh_Edirisinghe_Resume.pdf"
+          >
+            <motion.span
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="px-8 py-2 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
+            >
+              My Resume <Image src={assets.download_icon} alt="" className="w-4" />
+            </motion.span>
+          </a> */}
 
         </div>
       </div>
